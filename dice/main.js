@@ -70,6 +70,16 @@ function dice_initialize(container) {
         return $t.dice.parse_notation(set.value);
     }
 
+    const alcohol = new Map();
+    alcohol.set(1, '喝酒選項1')
+    alcohol.set(2, '喝酒選項2')
+    alcohol.set(3, '喝酒選項3')
+    alcohol.set(4, '喝酒選項4')
+    alcohol.set(5, '喝酒選項5')
+    alcohol.set(6, '喝酒選項6')
+    alcohol.set(7, '喝酒選項7')
+    alcohol.set(8, '喝酒選項8')
+
     function after_roll(notation, result) {
         if (params.chromakey || params.noresult) return;
         var res = result.join(' ');
@@ -77,8 +87,7 @@ function dice_initialize(container) {
             if (notation.constant > 0) res += ' +' + notation.constant;
             else res += ' -' + Math.abs(notation.constant);
         }
-        if (result.length >= 1) res += ' = ' +
-            (result.reduce(function (s, a) { return s + a; }) + notation.constant);
+        if (result.length >= 1) res += ' = ' + alcohol.get(result.reduce(function (s, a) { return s + a; }) + notation.constant);
         label.innerHTML = res;
         info_div.style.display = 'inline-block';
     }
