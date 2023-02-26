@@ -71,14 +71,14 @@ function dice_initialize(container) {
     }
 
     const alcohol = new Map();
-    alcohol.set(1, '喝酒選項1')
-    alcohol.set(2, '喝酒選項2')
-    alcohol.set(3, '喝酒選項3')
-    alcohol.set(4, '喝酒選項4')
-    alcohol.set(5, '喝酒選項5')
-    alcohol.set(6, '喝酒選項6')
-    alcohol.set(7, '喝酒選項7')
-    alcohol.set(8, '喝酒選項8')
+    alcohol.set(1, '喝一口畫一格')
+    alcohol.set(2, '喝兩口畫兩格')
+    alcohol.set(3, '喝一口由前一個決定一格')
+    alcohol.set(4, '喝兩口畫一格指定某人代罰')
+    alcohol.set(5, '喝一口拔掉某人一格')
+    alcohol.set(6, '喝兩口佔據人家一格(要表演)')
+    alcohol.set(7, '喝一口直接畫上一個人選的')
+    alcohol.set(8, '喝兩口被拔掉一格')
 
     function after_roll(notation, result) {
         if (params.chromakey || params.noresult) return;
