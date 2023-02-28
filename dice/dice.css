@@ -24,12 +24,36 @@
     padding: 0px;
 }
 
+@font-face {
+    font-family: "B";
+    src: url("./GenJyuuGothic-Bold.ttf");
+}
+
+@font-face {
+    font-family: "H";
+    src: url("./GenJyuuGothic-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "PB";
+    src: url("./GenJyuuGothic-P-Bold.ttf");
+}
+
+@font-face {
+    font-family: "PH";
+    src: url("./GenJyuuGothic-P-Heavy.ttf");
+}
+
 #label {
-    font-size: 32pt;
+    font-family: "H";
+    font-size: 40pt;
+    font-style: bold;
+    font-weight: 900;
     word-spacing: 0.5em;
     padding: 5px 15px;
-    color: rgba(21, 26, 26, 0.6);
+    color: rgb(255, 255, 255);
     top: 45%;
+    -webkit-text-stroke: 3px black;
 }
 
 #labelhelp {
